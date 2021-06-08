@@ -1,0 +1,234 @@
+:root {
+  --blue: #3464d6;
+  --font: "Segoe UI";
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App dimensions */
+.App {
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Remove all margins on the headers */
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* !---------------------------Intro Component Styling ----------------------------!  */
+
+/* Display and positioning for the intro section  */
+.intro {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--blue);
+  overflow: hidden;
+}
+
+/* This is a class inside the intro section 
+It Entails the styling of of the Intro Component */
+.container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* A class in the Intro component
+Changes the  */
+.content {
+  font-size: 8rem;
+  font-weight: 700;
+  visibility: hidden;
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+
+  animation: text-anime 1.5s ease-in-out;
+}
+.reward {
+  /* font-size: 12rem; */
+  text-align: center;
+}
+.reward-text {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+
+/* Set display for the main section  */
+.main-section {
+  display: flex;
+  width: 100%;
+}
+
+/* ! -------------------------- SideBar styling -----------------------------! */
+.side-bar {
+  height: 100vh;
+  display: flex;
+  width: 13%;
+}
+.side-main {
+  margin: 2rem 0rem 2rem 2rem;
+  max-height: 96%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #3464d6;
+  color: white;
+  border-radius: 1.7rem;
+}
+.side-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60%;
+  margin-top: 2rem;
+}
+.logo {
+  background-color: var(--white);
+  width: 150px;
+  height: 150px;
+  border-radius: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.logo-img {
+  width: 70%;
+  padding: 1rem;
+}
+.side-nav {
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link {
+  padding-bottom: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.secondary-nav {
+  padding-top: 6rem;
+}
+.contact {
+  background-color: var(--white);
+  color: black;
+  padding: 0.4rem 2rem;
+  border-radius: 2rem;
+}
+
+/* !-----------------------The switched components main styling--------------------! */
+.switch-main {
+  /* opacity: 0; */
+  width: 80%;
+  margin: 2rem 0rem 2rem 2rem;
+  border-radius: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* !---------------------Styling for the Contents Component -----------------! */
+.contents-comp {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+}
+
+/* !--------------------------------Home Component Styling ---------------------------!  */
+.home-main {
+  position: relative;
+  max-height: 96%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video1 {
+  height: 100%;
+  width: 100%;
+}
+.info-block-one {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgb(27, 27, 27, 0.9);
+}
+.info-block-one p {
+  color: white;
+}
+.info {
+  display: flex;
+}
+.info-details {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.header {
+  font-size: 1rem;
+  color: #3464d6;
+}
+.message-details {
+  width: 35ch;
+  padding: 4rem 0rem;
+}
+.get-started-cta {
+  background-color: transparent;
+  border: 1px white solid;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: #fff;
+}
+/* !---------------------------- All Animations used ----------------------------!  */
+
+@keyframes text-anime {
+  0% {
+    -webkit-text-stroke-width: 0px;
+    color: white;
+    visibility: visible;
+  }
+  50% {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    opacity: 0.7;
+  }
+  75% {
+    transform: scale(3);
+    visibility: hidden;
+  }
+  100% {
+    -webkit-text-stroke-width: 0px;
+    color: white;
+    visibility: hidden;
+  }
+}
