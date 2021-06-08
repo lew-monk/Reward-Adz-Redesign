@@ -10,6 +10,7 @@ import "./index.css";
 import Home from "./components/Home";
 import SideBar from "./components/SideBar";
 import Content from "./components/Content";
+import GetStarted from "./components/GetStarted";
 
 function App() {
   //State to use in the Switch statememt
@@ -23,11 +24,14 @@ function App() {
         return <Home />;
       case "content":
         return <Content />;
+      case "instructions":
+        return <GetStarted />;
       default:
         return <Home />;
     }
   };
 
+  console.log(componentDeterminor);
   return (
     <div className="App">
       {/* Beginning of the animated Intro */}

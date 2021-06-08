@@ -26,16 +26,6 @@ const Home = () => {
     setAutoPlayVideo(true);
   }, 5000);
 
-  //Set time out to show the pop ups
-  // setTimeout(() => {
-  //   setInfoPopUp(true);
-  // }, 20000);
-
-  //Set time out to End the pop ups
-  // setTimeout(() => {
-  //   setInfoPopUp(false);
-  // }, 50000);
-
   //Function to handle video progress and Pop ups
   const handleVideoProgress = (progress) => {
     setPlayedSeconds(progress.playedSeconds);

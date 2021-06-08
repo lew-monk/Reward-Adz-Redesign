@@ -23,7 +23,9 @@ const SideBar = ({ setComponent }) => {
           <div onClick={() => setComponent("home")} className="link">
             Home
           </div>
-          <div className="link">Get Started</div>
+          <div className="link" onClick={() => setComponent("instructions")}>
+            Get Started
+          </div>
           <div className="link" onClick={() => setComponent("content")}>
             Contents
           </div>
