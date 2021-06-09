@@ -7,6 +7,7 @@ import Player from "react-player";
 
 //Local Imports
 import GooglePlay from "../Images/google-play-white.svg";
+import myVideo from "../assets/videos/David RewardAdz Promo.mp4";
 
 const Home = () => {
   //State to automatically play the video
@@ -72,7 +73,7 @@ const Home = () => {
           <Player
             style={filter}
             ref={ref}
-            url={process.env.PUBLIC_URL + "/videos/David RewardAdz Promo.mp4"}
+            url={myVideo}
             height="100%"
             width="100%"
             playIcon={true}

@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Player from "react-player";
 
+//Local Imports
+import myVideo from "../assets/videos/Ronnie RewardAdz Promo.mp4";
+
 const Audio = () => {
   //State to store the played seconds in the video
   const [playedSeconds, setPlayedSeconds] = useState(0);
@@ -73,7 +76,7 @@ const Audio = () => {
         <Player
           height="100%"
           width="100%"
-          url={process.env.PUBLIC_URL + "/videos/Ronnie RewardAdz Promo.mp4"}
+          url={myVideo}
           playing
           controls
           onProgress={(progress) => handleVideoProgress(progress)}

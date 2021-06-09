@@ -7,6 +7,7 @@ import Player from "react-player";
 
 //Local Imports
 import PlayStore from "../Images/google-play.svg";
+import myVideo from "../assets/videos/Edited_20210608_221705.mp4";
 
 const GetStarted = () => {
   //State to store Installation Video time
@@ -100,7 +101,7 @@ const GetStarted = () => {
         {/* Beginning of the Video */}
 
         <Player
-          url="https://lew-monk.github.io/Reward-Adz-Redesign//videos/Edited_20210608_221705.mp4"
+          url={myVideo}
           height="auto"
           width="20vw"
           controls
