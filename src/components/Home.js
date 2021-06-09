@@ -72,7 +72,7 @@ const Home = () => {
           <Player
             style={filter}
             ref={ref}
-            url={window.location.origin + "/videos/David RewardAdz Promo.mp4"}
+            url={process.env.PUBLIC_URL + "/videos/David RewardAdz Promo.mp4"}
             height="100%"
             width="100%"
             playIcon={true}
@@ -82,7 +82,7 @@ const Home = () => {
             config={{
               file: {
                 attributes: {
-                  poster: window.location.origin + "/videos/rewards-promo.png",
+                  poster: process.env.PUBLIC_URL + "/videos/rewards-promo.png",
                 },
               },
             }}

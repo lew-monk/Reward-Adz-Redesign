@@ -73,7 +73,7 @@ const Audio = () => {
         <Player
           height="100%"
           width="100%"
-          url={window.location.origin + "/videos/Ronnie RewardAdz Promo.mp4"}
+          url={process.env.PUBLIC_URL + "/videos/Ronnie RewardAdz Promo.mp4"}
           playing
           controls
           onProgress={(progress) => handleVideoProgress(progress)}
