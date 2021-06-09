@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Reward-Adz-Redesign/static/css/main.450170c6.chunk.css",
-    "main.js": "/Reward-Adz-Redesign/static/js/main.bb7a7ec6.chunk.js",
-    "main.js.map": "/Reward-Adz-Redesign/static/js/main.bb7a7ec6.chunk.js.map",
+    "main.js": "/Reward-Adz-Redesign/static/js/main.93129297.chunk.js",
+    "main.js.map": "/Reward-Adz-Redesign/static/js/main.93129297.chunk.js.map",
     "runtime-main.js": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js",
     "runtime-main.js.map": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js.map",
     "static/js/2.39ceca45.chunk.js": "/Reward-Adz-Redesign/static/js/2.39ceca45.chunk.js",
@@ -10,7 +10,10 @@
     "index.html": "/Reward-Adz-Redesign/index.html",
     "static/css/main.450170c6.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.450170c6.chunk.css.map",
     "static/js/2.39ceca45.chunk.js.LICENSE.txt": "/Reward-Adz-Redesign/static/js/2.39ceca45.chunk.js.LICENSE.txt",
+    "static/media/David RewardAdz Promo.d64df133.mp4": "/Reward-Adz-Redesign/static/media/David RewardAdz Promo.d64df133.mp4",
+    "static/media/Edited_20210608_221705.c73cb703.mp4": "/Reward-Adz-Redesign/static/media/Edited_20210608_221705.c73cb703.mp4",
     "static/media/Group 3.c49cbae8.svg": "/Reward-Adz-Redesign/static/media/Group 3.c49cbae8.svg",
+    "static/media/Ronnie RewardAdz Promo.b1fa3343.mp4": "/Reward-Adz-Redesign/static/media/Ronnie RewardAdz Promo.b1fa3343.mp4",
     "static/media/google-play-white.e02afba3.svg": "/Reward-Adz-Redesign/static/media/google-play-white.e02afba3.svg",
     "static/media/google-play.2ea6813c.svg": "/Reward-Adz-Redesign/static/media/google-play.2ea6813c.svg"
   },
@@ -18,6 +21,6 @@
     "static/js/runtime-main.cb06663c.js",
     "static/js/2.39ceca45.chunk.js",
     "static/css/main.450170c6.chunk.css",
-    "static/js/main.bb7a7ec6.chunk.js"
+    "static/js/main.93129297.chunk.js"
   ]
 }
