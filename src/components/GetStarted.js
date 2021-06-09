@@ -100,7 +100,7 @@ const GetStarted = () => {
         {/* Beginning of the Video */}
 
         <Player
-          url={process.env.PUBLIC_URL + "/videos/Edited_20210608_221705.mp4"}
+          url="https://lew-monk.github.io/Reward-Adz-Redesign//videos/Edited_20210608_221705.mp4"
           height="auto"
           width="20vw"
           controls
