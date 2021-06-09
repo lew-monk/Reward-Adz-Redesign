@@ -9,9 +9,6 @@ import Player from "react-player";
 import PlayStore from "../Images/google-play.svg";
 
 const GetStarted = () => {
-  //State to play or pause video
-  const [playVideo, setPlayVideo] = useState(true);
-
   //State to store Installation Video time
   const [installationVideoTime, setInstallationVideoTime] = useState(0);
 
@@ -28,43 +25,58 @@ const GetStarted = () => {
   const [instructionFiveDisplay, setInstructionFiveDisplay] = useState(false);
 
   //State to control the render of Second Instructiion
-  const [instructionFourthDisplay, setInstructionFourthDisplay] =
-    useState(false);
+  const [instructionFourDisplay, setInstructionFourDisplay] = useState(false);
 
   //Function to handle Instalation video progress
   const handleInstallationVideoProgress = (time) => {
     setInstallationVideoTime(time.playedSeconds);
 
     //First Instruction is animated in
-    if (installationVideoTime > 0 && installationVideoTime < 2) {
+    if (installationVideoTime > 0 && installationVideoTime < 4) {
       setInstructionOneDisplay(true);
+      setInstructionTwoDisplay(false);
+      setInstructionThreeDisplay(false);
+      setInstructionFourDisplay(false);
+      setInstructionFiveDisplay(false);
     }
 
-    //Second Instruction is animated and
+    //Second Instruction is animated in and
     //First Instruction is animated out
-    if (installationVideoTime > 5 && installationVideoTime < 7) {
+    if (installationVideoTime > 5 && installationVideoTime < 22) {
+      setInstructionThreeDisplay(false);
+      setInstructionFourDisplay(false);
+      setInstructionFiveDisplay(false);
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(true);
     }
 
     //Third Instructions is animated in and
     //Second Instructions is animated out
-    if (installationVideoTime > 23 && installationVideoTime < 25) {
+    if (installationVideoTime > 23 && installationVideoTime < 29) {
+      setInstructionOneDisplay(false);
       setInstructionTwoDisplay(false);
+      setInstructionFourDisplay(false);
+      setInstructionFiveDisplay(false);
       setInstructionThreeDisplay(true);
     }
 
     //Fourth Instructions is animated in and
     //Third Instruction is animated out
-    if (installationVideoTime > 30 && installationVideoTime < 32) {
+    if (installationVideoTime > 30 && installationVideoTime < 34) {
+      setInstructionOneDisplay(false);
+      setInstructionTwoDisplay(false);
       setInstructionThreeDisplay(false);
-      setInstructionFourthDisplay(true);
+      setInstructionFiveDisplay(false);
+      setInstructionFourDisplay(true);
     }
 
     //Fifth Instructions is animated in and
     //Fourth Instruction is animated out
     if (installationVideoTime > 35 && installationVideoTime < 47) {
-      setInstructionFourthDisplay(false);
+      setInstructionOneDisplay(false);
+      setInstructionTwoDisplay(false);
+      setInstructionThreeDisplay(false);
+      setInstructionFourDisplay(false);
       setInstructionFiveDisplay(true);
     }
   };
@@ -82,7 +94,7 @@ const GetStarted = () => {
       <motion.div
         className="phone-player-mockup"
         initial={{ x: 100 }}
-        animate={{ x: 0 }}
+        animate={{ x: -50 }}
         transition={{ delay: 2 }}
       >
         {/* Beginning of the Video */}
@@ -92,8 +104,9 @@ const GetStarted = () => {
           height="auto"
           width="20vw"
           controls
-          playing={playVideo}
+          playing
           onProgress={(progress) => handleInstallationVideoProgress(progress)}
+
           // style={{ transform: "scale(1.1)" }}
         />
 
@@ -110,7 +123,7 @@ const GetStarted = () => {
               className="instruction"
               initial={{ y: 200 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
@@ -131,14 +144,14 @@ const GetStarted = () => {
 
         {/* Beginning of Second instruction  */}
 
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           {instructionTwoDisplay && (
             <motion.div
               className="instruction"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, y: -100 }}
-              transition={{ delay: 1 }}
-              exit={{ opacity: 0, x: "100vw" }}
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: -150 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              exit={{ opacity: 0, x: "100vw", y: 10 }}
             >
               <div className="instruction-head">
                 <h1>Download Reward-Adz</h1>
@@ -157,13 +170,13 @@ const GetStarted = () => {
 
         {/* Beginning of Three instruction  */}
 
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           {instructionThreeDisplay && (
             <motion.div
               className="instruction"
               initial={{ opacity: 0, y: 500 }}
               animate={{ opacity: 1, y: 220 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 2.5, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
@@ -185,13 +198,13 @@ const GetStarted = () => {
 
         {/* Beginning of Fourth instruction  */}
 
-        <AnimatePresence>
-          {instructionFourthDisplay && (
+        <AnimatePresence exitBeforeEnter initial={false}>
+          {instructionFourDisplay && (
             <motion.div
               className="instruction"
               initial={{ opacity: 0, y: 500 }}
               animate={{ opacity: 1, y: 300 }}
-              transition={{ delay: 1.5 }}
+              transition={{ delay: 1.5, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
@@ -210,13 +223,13 @@ const GetStarted = () => {
 
         {/* Beginning of Fifth instruction  */}
 
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           {instructionFiveDisplay && (
             <motion.div
               className="instruction"
               initial={{ opacity: 0, y: 500 }}
               animate={{ opacity: 1, y: -50 }}
-              transition={{ delay: 2 }}
+              transition={{ delay: 3, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">

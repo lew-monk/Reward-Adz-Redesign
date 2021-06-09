@@ -1,9 +1,22 @@
-import React from "react";
+//React Imports
+import React, { useState } from "react";
 
 //Local Imports
 import Logo from "../Images/Group 3.svg";
 
 const SideBar = ({ setComponent }) => {
+  //State to set Display style for embedded links
+  const [displayStyle, setDisplayStyle] = useState("none");
+
+  //Function to toggle embedded links
+  const handleToggleDisplay = () => {
+    if (displayStyle == "none") {
+      setDisplayStyle("flex");
+      return;
+    }
+    setDisplayStyle("none");
+  };
+
   return (
     <div className="side-main">
       {/* Beginning of the Navigation Panel */}
@@ -26,11 +39,21 @@ const SideBar = ({ setComponent }) => {
           <div className="link" onClick={() => setComponent("instructions")}>
             Get Started
           </div>
-          <div className="link" onClick={() => setComponent("content")}>
-            Contents
+          <div className="link" onClick={handleToggleDisplay}>
+            Content
+            <div style={{ display: displayStyle }}>
+              <ul>
+                <li
+                  className="embedded-link"
+                  onClick={() => setComponent("audio")}
+                >
+                  Audio Adz
+                </li>
+                <li className="embedded-link">Video Adz</li>
+                <li className="embedded-link">Survery</li>
+              </ul>
+            </div>
           </div>
-          <div className="link">Products</div>
-          <div className="link">Download</div>
         </div>
 
         <div className="secondary-nav">

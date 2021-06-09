@@ -6,17 +6,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import Player from "react-player";
 
 //Local Imports
-// import Promo from "../Images/rewards-promo.png";
+import GooglePlay from "../Images/google-play-white.svg";
 
 const Home = () => {
   //State to automatically play the video
   const [autoPlayVideo, setAutoPlayVideo] = useState(false);
 
+  //State to automatically play the video
+  const [filter, setFilter] = useState({});
+
   //State to render the information Pop up
   const [infoPopUp, setInfoPopUp] = useState(false);
 
-  //Store the number of seconds played
+  //State the number of seconds played
   const [playedSeconds, setPlayedSeconds] = useState(0);
+
+  //State to control the Main cta display
+  const [ctaDisplay, setCtaDisplay] = useState(false);
 
   //Create a ref to for the video
   const ref = createRef();
@@ -36,6 +42,18 @@ const Home = () => {
     if (playedSeconds >= 44 && playedSeconds <= 46) {
       setInfoPopUp(false);
     }
+    if (playedSeconds > 45) {
+      setFilter({ filter: "blur(5px)" });
+      setCtaDisplay(true);
+    }
+
+    if (playedSeconds > 55) {
+      setFilter({});
+    }
+  };
+
+  const handleVideoEnd = () => {
+    setFilter({});
   };
 
   return (
@@ -52,6 +70,7 @@ const Home = () => {
 
         <div className="video1">
           <Player
+            style={filter}
             ref={ref}
             url={window.location.origin + "/videos/David RewardAdz Promo.mp4"}
             height="100%"
@@ -67,6 +86,7 @@ const Home = () => {
                 },
               },
             }}
+            onBufferEnd={handleVideoEnd}
           />
         </div>
 
@@ -172,7 +192,29 @@ const Home = () => {
             </motion.div>
           </AnimatePresence>
         )}
+
+        {ctaDisplay && (
+          <motion.div
+            className="main-cta"
+            initial={{ x: "-100vw" }}
+            animate={{ x: 0 }}
+          >
+            <div className="main-cta-info">
+              <div>
+                <h1 className="main-cta-header">
+                  Lets Begin the Reward Ad-venture
+                </h1>
+              </div>
+              <div>
+                <img src={GooglePlay} alt="Google Play Button" />
+              </div>
+            </div>
+          </motion.div>
+        )}
+        {/* End of the Main CTA section  */}
       </motion.div>
+
+      {/* Beginning of the Main CTA section  */}
     </div>
     // End of the Introduction Video
   );

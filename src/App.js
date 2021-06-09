@@ -9,7 +9,7 @@ import Intro from "./components/Intro";
 import "./index.css";
 import Home from "./components/Home";
 import SideBar from "./components/SideBar";
-import Content from "./components/Content";
+import Audio from "./components/Audio";
 import GetStarted from "./components/GetStarted";
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
     switch (componentDeterminor) {
       case "home":
         return <Home />;
-      case "content":
-        return <Content />;
+      case "audio":
+        return <Audio />;
       case "instructions":
         return <GetStarted />;
       default:
