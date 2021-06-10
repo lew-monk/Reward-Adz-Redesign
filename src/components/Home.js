@@ -78,7 +78,7 @@ const Home = () => {
             width="100%"
             playIcon={true}
             controls
-            playing={autoPlayVideo}
+            // playing={autoPlayVideo}
             onProgress={(played) => handleVideoProgress(played)}
             config={{
               file: {

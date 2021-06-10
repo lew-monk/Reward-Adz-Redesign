@@ -70,10 +70,30 @@ Changes the  */
   color: transparent;
 }
 
-/* Set display for the main section  */
+/* !------------------------ Set display for the main section -----------------------!  */
 .main-section {
   display: flex;
   width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .App {
+    height: 100vh;
+  }
+  .intro {
+    height: 100%;
+    width: 100%;
+  }
+  .main-section {
+    flex-direction: column;
+    height: 100%;
+  }
+  .content {
+    font-size: 4rem;
+  }
+  .reward-text {
+    font-size: 4rem;
+    color: white;
+  }
 }
 
 /* ! -------------------------- SideBar styling -----------------------------! */
@@ -146,6 +166,52 @@ Changes the  */
   padding: 0.4rem 2rem;
   border-radius: 2rem;
 }
+@media only screen and (max-width: 400px) {
+  .side-bar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .side-main {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 0;
+    margin: 0;
+  }
+  .side-content {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    width: 80%;
+    overflow-x: scroll;
+  }
+
+  .side-bar {
+    height: 10vh;
+  }
+
+  .logo {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .logo-img {
+    height: 3rem;
+  }
+  .side-nav {
+    flex-direction: row;
+  }
+  .link {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
 
 /* !-----------------------The switched components main styling--------------------! */
 .switch-main {
@@ -156,6 +222,16 @@ Changes the  */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .switch-main {
+    height: 90vh;
+    width: 100vw;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* !---------------------Styling for the Contents Component -----------------! */
@@ -239,6 +315,18 @@ Changes the  */
   color: #fff;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 4rem;
+}
+@media only screen and (max-width: 400px) {
+  .home-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .video1 {
+    width: 90%;
+  }
+  .info-block-one {
+    position: relative;
+  }
 }
 
 /* !---------------------Styling for the Get Started Component -----------------! */
