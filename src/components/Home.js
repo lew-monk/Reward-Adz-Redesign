@@ -7,7 +7,8 @@ import Player from "react-player";
 
 //Local Imports
 import GooglePlay from "../Images/google-play-white.svg";
-import myVideo from "../assets/videos/David RewardAdz Promo.mp4";
+import myVideo from "../assets/videos/David Rewardadz Promo-1.m4v";
+import Poster from "../assets/videos/rewards-promo.png";
 
 const Home = () => {
   //State to automatically play the video
@@ -43,7 +44,7 @@ const Home = () => {
     if (playedSeconds >= 44 && playedSeconds <= 46) {
       setInfoPopUp(false);
     }
-    if (playedSeconds > 45) {
+    if (playedSeconds > 47) {
       setFilter({ filter: "blur(5px)" });
       setCtaDisplay(true);
     }
@@ -83,7 +84,7 @@ const Home = () => {
             config={{
               file: {
                 attributes: {
-                  poster: process.env.PUBLIC_URL + "/videos/rewards-promo.png",
+                  poster: { Poster },
                 },
               },
             }}
@@ -199,6 +200,7 @@ const Home = () => {
             className="main-cta"
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="main-cta-info">
               <div>

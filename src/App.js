@@ -11,6 +11,8 @@ import Home from "./components/Home";
 import SideBar from "./components/SideBar";
 import Audio from "./components/Audio";
 import GetStarted from "./components/GetStarted";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   //State to use in the Switch statememt
@@ -24,8 +26,12 @@ function App() {
         return <Home />;
       case "audio":
         return <Audio />;
-      case "instructions":
+      case "getStarted":
         return <GetStarted />;
+      case "about":
+        return <About />;
+      case "contact":
+        return <Contact />;
       default:
         return <Home />;
     }

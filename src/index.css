@@ -144,8 +144,8 @@ Changes the  */
 }
 
 .link {
-  padding-bottom: 2rem;
-  text-align: left;
+  margin-bottom: 3rem;
+  text-align: center;
   cursor: pointer;
   /* font-family: "Courier Prime", monospace; */
   font-family: "Montserrat", sans-serif;
@@ -159,12 +159,6 @@ Changes the  */
 }
 .secondary-nav {
   padding-top: 6rem;
-}
-.contact {
-  background-color: var(--white);
-  color: black;
-  padding: 0.4rem 2rem;
-  border-radius: 2rem;
 }
 @media only screen and (max-width: 400px) {
   .side-bar {
@@ -438,6 +432,14 @@ Changes the  */
   color: #fff;
   width: 30ch;
 }
+
+/* ! ------------------------------ About Styling ---------------------------------!   */
+.about-main {
+  height: 100%;
+  width: 100%;
+}
+
+/* ! ------------------------------ Contact Styling ---------------------------------!   */
 
 /* !---------------------------- All Animations used ----------------------------!  */
 

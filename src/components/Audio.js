@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Player from "react-player";
 
 //Local Imports
-import myVideo from "../assets/videos/Ronnie RewardAdz Promo.mp4";
+import myVideo from "../assets/videos/Ronnie Rewardadz Promo-1.m4v";
 
 const Audio = () => {
   //State to store the played seconds in the video

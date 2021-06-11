@@ -4,17 +4,70 @@ import React, { useState } from "react";
 //Local Imports
 import Logo from "../Images/Group 3.svg";
 
-const SideBar = ({ setComponent }) => {
-  //State to set Display style for embedded links
-  const [displayStyle, setDisplayStyle] = useState("none");
+const activeStyles = {
+  backgroundColor: "#fff",
+  color: "black",
+  padding: "0.4rem 2rem",
+  borderRadius: "2rem",
+  margin: 0,
+};
 
-  //Function to toggle embedded links
-  const handleToggleDisplay = () => {
-    if (displayStyle == "none") {
-      setDisplayStyle("flex");
-      return;
-    }
-    setDisplayStyle("none");
+const SideBar = ({ setComponent }) => {
+  //State to handle Active Link
+  const [homeActive, setHomeACtive] = useState(false);
+  const [getStartedActive, setGetStartedActive] = useState(false);
+  const [contentActive, setContentActive] = useState(false);
+  const [aboutActive, setAboutActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
+
+  //Function to handle Home button click
+  const handleHomeActiveLink = () => {
+    setComponent("home");
+    setContentActive(false);
+    setGetStartedActive(false);
+    setAboutActive(false);
+    setContactActive(false);
+    setHomeACtive(true);
+  };
+
+  //Function to handle Get Started button click
+  const handleGetStartedActiveLink = () => {
+    setComponent("getStarted");
+    setContentActive(false);
+    setHomeACtive(false);
+    setAboutActive(false);
+    setContactActive(false);
+    setGetStartedActive(true);
+  };
+
+  //Function to handle Home button click
+  const handleContentActiveLink = () => {
+    setComponent("content");
+    setGetStartedActive(false);
+    setHomeACtive(false);
+    setAboutActive(false);
+    setContactActive(false);
+    setContentActive(true);
+  };
+
+  //Function to handle About button click
+  const handleAboutActiveLink = () => {
+    setComponent("about");
+    setGetStartedActive(false);
+    setHomeACtive(false);
+    setContactActive(false);
+    setContentActive(false);
+    setAboutActive(true);
+  };
+
+  //Function to handle Home button click
+  const handleContactActiveLink = () => {
+    setComponent("contact");
+    setGetStartedActive(false);
+    setHomeACtive(false);
+    setAboutActive(false);
+    setContentActive(false);
+    setContactActive(true);
   };
 
   return (
@@ -33,33 +86,34 @@ const SideBar = ({ setComponent }) => {
         {/* Beginning of the Navigation Links */}
 
         <div className="side-nav">
-          <div onClick={() => setComponent("home")} className="link">
-            Home
+          <div onClick={handleHomeActiveLink} className="link">
+            <div style={homeActive ? activeStyles : {}}>Home</div>
           </div>
-          <div className="link" onClick={() => setComponent("instructions")}>
-            Get Started
+          <div className="link" onClick={handleGetStartedActiveLink}>
+            <div style={getStartedActive ? activeStyles : {}}>Get Started</div>
           </div>
-          <div className="link" onClick={handleToggleDisplay}>
-            Content
-            <div style={{ display: displayStyle }}>
-              <ul>
-                <li
-                  className="embedded-link"
-                  onClick={() => setComponent("audio")}
-                >
-                  Audio Adz
-                </li>
-                <li className="embedded-link">Video Adz</li>
-                <li className="embedded-link">Survery</li>
-              </ul>
-            </div>
+          <div className="link" onClick={handleContentActiveLink}>
+            <div style={contentActive ? activeStyles : {}}>Content</div>
           </div>
         </div>
 
         <div className="secondary-nav">
-          <div className="link">About us</div>
+          <div className="link">
+            <div
+              onClick={handleAboutActiveLink}
+              style={aboutActive ? activeStyles : {}}
+            >
+              About us
+            </div>
+          </div>
           <div className="link ">
-            <p className="contact">Contact</p>
+            <div
+              className="link"
+              onClick={handleContactActiveLink}
+              style={contactActive ? activeStyles : {}}
+            >
+              Contact
+            </div>
           </div>
         </div>
 
