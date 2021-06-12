@@ -73,22 +73,22 @@ const Home = () => {
         <div className="video1">
           <Player
             style={filter}
+            className="home-video"
             ref={ref}
             url={myVideo}
             height="100%"
             width="100%"
-            playIcon={true}
-            controls
-            // playing={autoPlayVideo}
+            playIcon
+            playing={autoPlayVideo}
             onProgress={(played) => handleVideoProgress(played)}
             config={{
               file: {
                 attributes: {
-                  poster: { Poster },
+                  poster: Poster,
                 },
               },
             }}
-            onBufferEnd={handleVideoEnd}
+            onEnded={handleVideoEnd}
           />
         </div>
 

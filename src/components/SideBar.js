@@ -7,7 +7,6 @@ import Logo from "../Images/Group 3.svg";
 const activeStyles = {
   backgroundColor: "#fff",
   color: "black",
-  padding: "0.4rem 2rem",
   borderRadius: "2rem",
   margin: 0,
 };
@@ -87,13 +86,19 @@ const SideBar = ({ setComponent }) => {
 
         <div className="side-nav">
           <div onClick={handleHomeActiveLink} className="link">
-            <div style={homeActive ? activeStyles : {}}>Home</div>
+            <div style={homeActive ? activeStyles : {}}>
+              <p>Home</p>
+            </div>
           </div>
           <div className="link" onClick={handleGetStartedActiveLink}>
-            <div style={getStartedActive ? activeStyles : {}}>Get Started</div>
+            <div style={getStartedActive ? activeStyles : {}}>
+              <p>Get Started</p>
+            </div>
           </div>
           <div className="link" onClick={handleContentActiveLink}>
-            <div style={contentActive ? activeStyles : {}}>Content</div>
+            <div style={contentActive ? activeStyles : {}}>
+              <p>Content</p>
+            </div>
           </div>
         </div>
 
@@ -103,16 +108,15 @@ const SideBar = ({ setComponent }) => {
               onClick={handleAboutActiveLink}
               style={aboutActive ? activeStyles : {}}
             >
-              About us
+              <p style={{ padding: "0.5rem 1rem", margin: "0rem" }}>About</p>
             </div>
           </div>
           <div className="link ">
             <div
-              className="link"
               onClick={handleContactActiveLink}
               style={contactActive ? activeStyles : {}}
             >
-              Contact
+              <p style={{ padding: "0.5rem 1rem", margin: "0rem" }}>Contact</p>
             </div>
           </div>
         </div>

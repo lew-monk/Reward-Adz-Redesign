@@ -13,6 +13,7 @@ import Audio from "./components/Audio";
 import GetStarted from "./components/GetStarted";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Content from "./components/Content";
 
 function App() {
   //State to use in the Switch statememt
@@ -24,8 +25,8 @@ function App() {
     switch (componentDeterminor) {
       case "home":
         return <Home />;
-      case "audio":
-        return <Audio />;
+      case "content":
+        return <Content />;
       case "getStarted":
         return <GetStarted />;
       case "about":

@@ -78,7 +78,6 @@ const Audio = () => {
           width="100%"
           url={myVideo}
           playing
-          controls
           onProgress={(progress) => handleVideoProgress(progress)}
         />
       </motion.div>
