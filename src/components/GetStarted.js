@@ -33,7 +33,7 @@ const GetStarted = () => {
     setInstallationVideoTime(time.playedSeconds);
 
     //First Instruction is animated in
-    if (installationVideoTime > 0 && installationVideoTime < 4) {
+    if (installationVideoTime >= 0 && installationVideoTime < 4) {
       setInstructionOneDisplay(true);
       setInstructionTwoDisplay(false);
       setInstructionThreeDisplay(false);
@@ -105,7 +105,6 @@ const GetStarted = () => {
           height="auto"
           width="20vw"
           controls
-          playing
           onProgress={(progress) => handleInstallationVideoProgress(progress)}
 
           // style={{ transform: "scale(1.1)" }}

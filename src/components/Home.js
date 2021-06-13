@@ -14,7 +14,12 @@ const Home = () => {
   //State to automatically play the video
   const [autoPlayVideo, setAutoPlayVideo] = useState(false);
 
-  //State to automatically play the video
+  //States to control Mobile Instructions
+  const [informatioOneDisplay, setInformationOneDisplay] = useState(false);
+  const [informatioTwoDisplay, setInformationTwoDisplay] = useState(false);
+  const [informatioThreeDisplay, setInformationThreeDisplay] = useState(false);
+
+  //State to set Filter on the video
   const [filter, setFilter] = useState({});
 
   //State to render the information Pop up
@@ -41,6 +46,27 @@ const Home = () => {
     if (playedSeconds >= 15 && playedSeconds <= 16) {
       setInfoPopUp(true);
     }
+    //Mobile Information Pop Up Controll
+    if (playedSeconds >= 15 && playedSeconds <= 17) {
+      setInformationOneDisplay(true);
+      setInformationTwoDisplay(false);
+      setInformationThreeDisplay(false);
+    }
+    if (playedSeconds >= 24 && playedSeconds <= 26) {
+      setInformationOneDisplay(false);
+      setInformationTwoDisplay(true);
+      setInformationThreeDisplay(false);
+    }
+    if (playedSeconds >= 32 && playedSeconds <= 34) {
+      setInformationOneDisplay(false);
+      setInformationTwoDisplay(false);
+      setInformationThreeDisplay(true);
+    }
+    if (playedSeconds > 38) {
+      setInformationOneDisplay(false);
+      setInformationTwoDisplay(false);
+      setInformationThreeDisplay(false);
+    }
     if (playedSeconds >= 44 && playedSeconds <= 46) {
       setInfoPopUp(false);
     }
@@ -60,7 +86,7 @@ const Home = () => {
 
   return (
     // Beginning of the Introduction Video
-    <div>
+    <div className="landing-main">
       <motion.div
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
@@ -73,12 +99,10 @@ const Home = () => {
         <div className="video1">
           <Player
             style={filter}
-            className="home-video"
             ref={ref}
             url={myVideo}
             height="100%"
             width="100%"
-            playIcon
             playing={autoPlayVideo}
             onProgress={(played) => handleVideoProgress(played)}
             config={{
@@ -106,94 +130,194 @@ const Home = () => {
               <div className="info">
                 {/* Beginning First Information Block */}
 
-                <motion.div
-                  className="info-details"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1 }}
-                >
-                  <div className="header">
-                    <h1>Re- Evaluate</h1>
-                  </div>
-                  <div className="message">
-                    <p className="message-details">
-                      At Reward Adz we aim to re evaluate how we consume and
-                      send adz. <br /> Want to get Organic ads and reach? Want
-                      to make money watching ads?
-                    </p>
-                    <div className="cta">
-                      <input
-                        type="button"
-                        className="get-started-cta"
-                        value="Get started"
-                      />
+                {/* Beginning of Web Block  */}
+                <div className="web-block">
+                  <motion.div
+                    className="info-details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                  >
+                    <div className="header">
+                      <h1>Re- Evaluate</h1>
                     </div>
-                  </div>
-                </motion.div>
-
-                {/* End First Information Block */}
-
-                {/* Beginning of Second Information Block */}
-
-                <motion.div
-                  className="info-details"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 10 }}
-                >
-                  <div className="header">
-                    <h1>Organic Reach</h1>
-                  </div>
-                  <div className="message">
-                    <p className="message-details">
-                      At Reward Adz we aim to re evaluate how we consume and
-                      send adz. <br /> Want to get Organic ads and reach?
-                      Consult at rewards Adz to know how
-                    </p>
-                    <div className="cta">
-                      <input
-                        type="button"
-                        className="get-started-cta"
-                        value="Get Reach"
-                      />
+                    <div className="message">
+                      <p className="message-details">
+                        At Reward Adz we aim to re evaluate how we consume and
+                        send adz. <br /> Want to get Organic ads and reach? Want
+                        to make money watching ads?
+                      </p>
+                      <div className="cta">
+                        <input
+                          type="button"
+                          className="get-started-cta"
+                          value="Get started"
+                        />
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
 
-                {/* End of Second Information Block */}
+                  {/* End First Information Block */}
 
-                {/* Beginning of Third Information Block */}
+                  {/* Beginning of Second Information Block */}
 
-                <motion.div
-                  className="info-details"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 19 }}
-                >
-                  <div className="header">
-                    <h1>Watch Adz</h1>
-                  </div>
-                  <div className="message">
-                    <p className="message-details">
-                      Do you feel exposed watching adz? <br />
-                      How about make money by watching adz. <br /> With rewards
-                      Adz you can get paid by consuming ads.
-                    </p>
-                    <div className="cta">
-                      <input
-                        type="button"
-                        className="get-started-cta"
-                        value="Get paid ?"
-                      />
+                  <motion.div
+                    className="info-details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 10 }}
+                  >
+                    <div className="header">
+                      <h1>Organic Reach</h1>
                     </div>
-                  </div>
-                </motion.div>
+                    <div className="message">
+                      <p className="message-details">
+                        At Reward Adz we aim to re evaluate how we consume and
+                        send adz. <br /> Want to get Organic ads and reach?
+                        Consult at rewards Adz to know how
+                      </p>
+                      <div className="cta">
+                        <input
+                          type="button"
+                          className="get-started-cta"
+                          value="Get Reach"
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* End of Second Information Block */}
+
+                  {/* Beginning of Third Information Block */}
+
+                  <motion.div
+                    className="info-details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 19 }}
+                  >
+                    <div className="header">
+                      <h1>Watch Adz</h1>
+                    </div>
+                    <div className="message">
+                      <p className="message-details">
+                        Do you feel exposed watching adz? <br />
+                        How about make money by watching adz. <br /> With
+                        rewards Adz you can get paid by consuming ads.
+                      </p>
+                      <div className="cta">
+                        <input
+                          type="button"
+                          className="get-started-cta"
+                          value="Get paid ?"
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+                {/* End of Web Block  */}
+
+                {/* Beginning of Mobile Block  */}
+                <div className="mobile-block">
+                  {informatioOneDisplay && (
+                    <motion.div
+                      className="info-details-mobile"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1 }}
+                    >
+                      <div className="header">
+                        <h1>Re- Evaluate</h1>
+                      </div>
+                      <div className="message">
+                        <p className="message-details">
+                          At Reward Adz we aim to re evaluate how we consume and
+                          send adz. <br /> Want to get Organic ads and reach?
+                          Want to make money watching ads?
+                        </p>
+                        <div className="cta">
+                          <input
+                            type="button"
+                            className="get-started-cta"
+                            value="Get started"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* End First Information Block */}
+
+                  {/* Beginning of Second Information Block */}
+
+                  {informatioTwoDisplay && (
+                    <motion.div
+                      className="info-details-mobile"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1 }}
+                    >
+                      <div className="header">
+                        <h1>Organic Reach</h1>
+                      </div>
+                      <div className="message">
+                        <p className="message-details">
+                          At Reward Adz we aim to re evaluate how we consume and
+                          send adz. <br /> Want to get Organic ads and reach?
+                          Consult at rewards Adz to know how
+                        </p>
+                        <div className="cta">
+                          <input
+                            type="button"
+                            className="get-started-cta"
+                            value="Get Reach"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* End of Second Information Block */}
+
+                  {/* Beginning of Third Information Block */}
+
+                  {informatioThreeDisplay && (
+                    <motion.div
+                      className="info-details-mobile"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1 }}
+                    >
+                      <div className="header">
+                        <h1>Watch Adz</h1>
+                      </div>
+                      <div className="message">
+                        <p className="message-details">
+                          Do you feel exposed watching adz? <br />
+                          How about make money by watching adz. <br /> With
+                          rewards Adz you can get paid by consuming ads.
+                        </p>
+                        <div className="cta">
+                          <input
+                            type="button"
+                            className="get-started-cta"
+                            value="Get paid ?"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+                {/* End of Mobile Block  */}
 
                 {/* End of Third Information Block */}
               </div>
             </motion.div>
           </AnimatePresence>
         )}
+
+        {/* Beginning of Mobile Info Block  */}
+        {/* End of Mobile Info Block  */}
 
         {ctaDisplay && (
           <motion.div

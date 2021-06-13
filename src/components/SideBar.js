@@ -19,6 +19,9 @@ const SideBar = ({ setComponent }) => {
   const [aboutActive, setAboutActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
+  //State to toggle ClassNames for burger menu
+  const [menuBurgerToggled, setMenuBurgerTogggled] = useState(false);
+
   //Function to handle Home button click
   const handleHomeActiveLink = () => {
     setComponent("home");
@@ -69,6 +72,13 @@ const SideBar = ({ setComponent }) => {
     setContactActive(true);
   };
 
+  //Function to handle Menu burger Click
+  const handleMenuClick = (target) => {
+    menuBurgerToggled
+      ? setMenuBurgerTogggled(false)
+      : setMenuBurgerTogggled(true);
+  };
+
   return (
     <div className="side-main">
       {/* Beginning of the Navigation Panel */}
@@ -79,12 +89,29 @@ const SideBar = ({ setComponent }) => {
         <img src={Logo} alt="Logo" className="logo-img" />
       </div>
 
+      {/* Burger Menu  */}
+      <div
+        className={menuBurgerToggled ? "burger-menu change" : "burger-menu"}
+        onClick={handleMenuClick}
+      >
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+      </div>
+      {/* Burger Menu  */}
+
       {/* End of the Image */}
 
-      <div className="side-content">
+      <div
+        className={
+          menuBurgerToggled
+            ? "side-content display-flex-helper"
+            : "side-content"
+        }
+      >
         {/* Beginning of the Navigation Links */}
 
-        <div className="side-nav">
+        <div className="side-nav" onClick={handleMenuClick}>
           <div onClick={handleHomeActiveLink} className="link">
             <div style={homeActive ? activeStyles : {}}>
               <p>Home</p>
@@ -102,7 +129,7 @@ const SideBar = ({ setComponent }) => {
           </div>
         </div>
 
-        <div className="secondary-nav">
+        <div className="secondary-nav" onClick={handleMenuClick}>
           <div className="link">
             <div
               onClick={handleAboutActiveLink}

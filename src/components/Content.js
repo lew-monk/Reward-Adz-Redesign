@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 
 //Local Imports
-import Audio from "./Audio";
-import Home from "./Home";
+import Audio from "./Instructions/Audio";
 import VideoInstructions from "./Instructions/VideoInstructions";
 
 //Global Styles

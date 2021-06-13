@@ -9,7 +9,6 @@ import Intro from "./components/Intro";
 import "./index.css";
 import Home from "./components/Home";
 import SideBar from "./components/SideBar";
-import Audio from "./components/Audio";
 import GetStarted from "./components/GetStarted";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -38,7 +37,6 @@ function App() {
     }
   };
 
-  console.log(componentDeterminor);
   return (
     <div className="App">
       {/* Beginning of the animated Intro */}

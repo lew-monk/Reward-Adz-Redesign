@@ -6,7 +6,7 @@ import Player from "react-player";
 import { motion } from "framer-motion";
 
 //Local Imports
-import myVideo from "../../assets/videos/David Rewardadz Promo-1.m4v";
+import myVideo from "../../assets/videos/Ronnie Rewardadz Promo-1.m4v";
 
 const VideoInstructions = () => {
   //States to control Instructions display
