@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Reward-Adz-Redesign/static/css/main.5dc0cfa6.chunk.css",
-    "main.js": "/Reward-Adz-Redesign/static/js/main.5a74ad10.chunk.js",
-    "main.js.map": "/Reward-Adz-Redesign/static/js/main.5a74ad10.chunk.js.map",
+    "main.css": "/Reward-Adz-Redesign/static/css/main.3a5da1ac.chunk.css",
+    "main.js": "/Reward-Adz-Redesign/static/js/main.c288c7c3.chunk.js",
+    "main.js.map": "/Reward-Adz-Redesign/static/js/main.c288c7c3.chunk.js.map",
     "runtime-main.js": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js",
     "runtime-main.js.map": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js.map",
     "static/js/2.cf8e0882.chunk.js": "/Reward-Adz-Redesign/static/js/2.cf8e0882.chunk.js",
     "static/js/2.cf8e0882.chunk.js.map": "/Reward-Adz-Redesign/static/js/2.cf8e0882.chunk.js.map",
     "index.html": "/Reward-Adz-Redesign/index.html",
-    "static/css/main.5dc0cfa6.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.5dc0cfa6.chunk.css.map",
+    "static/css/main.3a5da1ac.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.3a5da1ac.chunk.css.map",
     "static/js/2.cf8e0882.chunk.js.LICENSE.txt": "/Reward-Adz-Redesign/static/js/2.cf8e0882.chunk.js.LICENSE.txt",
     "static/media/David Rewardadz Promo-1.14c56d6f.m4v": "/Reward-Adz-Redesign/static/media/David Rewardadz Promo-1.14c56d6f.m4v",
     "static/media/Edited_20210608_221705.c73cb703.mp4": "/Reward-Adz-Redesign/static/media/Edited_20210608_221705.c73cb703.mp4",
-    "static/media/Group 3.b2c5c0eb.svg": "/Reward-Adz-Redesign/static/media/Group 3.b2c5c0eb.svg",
+    "static/media/Group 3.c49cbae8.svg": "/Reward-Adz-Redesign/static/media/Group 3.c49cbae8.svg",
     "static/media/Ronnie Rewardadz Promo-1.8a390d42.m4v": "/Reward-Adz-Redesign/static/media/Ronnie Rewardadz Promo-1.8a390d42.m4v",
     "static/media/google-play-white.e02afba3.svg": "/Reward-Adz-Redesign/static/media/google-play-white.e02afba3.svg",
     "static/media/google-play.2ea6813c.svg": "/Reward-Adz-Redesign/static/media/google-play.2ea6813c.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.cb06663c.js",
     "static/js/2.cf8e0882.chunk.js",
-    "static/css/main.5dc0cfa6.chunk.css",
-    "static/js/main.5a74ad10.chunk.js"
+    "static/css/main.3a5da1ac.chunk.css",
+    "static/js/main.c288c7c3.chunk.js"
   ]
 }
