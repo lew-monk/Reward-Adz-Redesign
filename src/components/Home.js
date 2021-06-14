@@ -11,9 +11,6 @@ import myVideo from "../assets/videos/David Rewardadz Promo-1.m4v";
 import Poster from "../assets/videos/rewards-promo.png";
 
 const Home = () => {
-  //State to automatically play the video
-  const [autoPlayVideo, setAutoPlayVideo] = useState(false);
-
   //States to control Mobile Instructions
   const [informatioOneDisplay, setInformationOneDisplay] = useState(false);
   const [informatioTwoDisplay, setInformationTwoDisplay] = useState(false);
@@ -33,11 +30,6 @@ const Home = () => {
 
   //Create a ref to for the video
   const ref = createRef();
-
-  //Set timout for 5 seconds to start playing the video
-  setTimeout(() => {
-    setAutoPlayVideo(true);
-  }, 5000);
 
   //Function to handle video progress and Pop ups
   const handleVideoProgress = (progress) => {
@@ -103,7 +95,7 @@ const Home = () => {
             url={myVideo}
             height="100%"
             width="100%"
-            playing={autoPlayVideo}
+            playing
             onProgress={(played) => handleVideoProgress(played)}
             config={{
               file: {
