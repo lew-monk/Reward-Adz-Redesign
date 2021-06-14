@@ -260,7 +260,7 @@ Changes the  */
 /* !-----------------------The switched components main styling--------------------! */
 .switch-main {
   /* opacity: 0; */
-  width: 80%;
+  width: 100%;
   margin: 2rem 0rem 2rem 2rem;
   border-radius: 1.75rem;
   display: flex;
@@ -268,7 +268,7 @@ Changes the  */
   align-items: center;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .switch-main {
     height: 90vh;
     width: 100vw;
@@ -375,7 +375,7 @@ Changes the  */
   font-family: "Montserrat", sans-serif;
   margin-bottom: 4rem;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .home-main {
     display: flex;
     flex-direction: column;
