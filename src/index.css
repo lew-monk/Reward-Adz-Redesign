@@ -375,7 +375,7 @@ Changes the  */
   font-family: "Montserrat", sans-serif;
   margin-bottom: 4rem;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .home-main {
     display: flex;
     flex-direction: column;
