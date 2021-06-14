@@ -4,6 +4,7 @@ import React, { useState } from "react";
 //Package Imports
 import { motion, AnimatePresence } from "framer-motion";
 import Player from "react-player";
+import { isMobile } from "react-device-detect";
 
 //Local Imports
 import PlayStore from "../Images/google-play.svg";
@@ -53,7 +54,7 @@ const GetStarted = () => {
 
     //Third Instructions is animated in and
     //Second Instructions is animated out
-    if (installationVideoTime > 23 && installationVideoTime < 29) {
+    if (installationVideoTime >= 25 && installationVideoTime < 27) {
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionFourDisplay(false);
@@ -63,7 +64,7 @@ const GetStarted = () => {
 
     //Fourth Instructions is animated in and
     //Third Instruction is animated out
-    if (installationVideoTime > 30 && installationVideoTime < 34) {
+    if (installationVideoTime > 29 && installationVideoTime < 34) {
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionThreeDisplay(false);
@@ -82,6 +83,36 @@ const GetStarted = () => {
     }
   };
 
+  //Phone Mockup Object Animation
+  const phoneAnimation = {
+    mobile: { initial: {}, animate: {} },
+    web: { initial: { x: 100 }, animate: { x: -50 } },
+  };
+
+  //Instructions Animation Animation
+  const instructionOneAnimation = {
+    mobile: { initial: { opacity: 0 }, animate: { opacity: 1 } },
+    web: { initial: { y: 200 }, animate: { opacity: 1, y: 0 } },
+  };
+
+  const instructionTwoAnimation = {
+    mobile: { initial: { opacity: 0 }, animate: { opacity: 1 } },
+    web: { initial: { opacity: 0, y: 0 }, animate: { opacity: 1, y: -150 } },
+  };
+
+  const instructionThreeAnimation = {
+    mobile: { initial: { opacity: 0 }, animate: { opacity: 1 } },
+    web: { initial: { opacity: 0, y: 500 }, animate: { opacity: 1, y: 220 } },
+  };
+  const instructionFourAnimation = {
+    mobile: { initial: { opacity: 0 }, animate: { opacity: 1 } },
+    web: { initial: { opacity: 0, y: 500 }, animate: { opacity: 1, y: 300 } },
+  };
+  const instructionFiveAnimation = {
+    mobile: { initial: { opacity: 0 }, animate: { opacity: 1 } },
+    web: { initial: { opacity: 0, y: 500 }, animate: { opacity: 1, y: -50 } },
+  };
+
   return (
     //Beginning of the Main section of the Instructions
     <motion.div
@@ -94,17 +125,23 @@ const GetStarted = () => {
 
       <motion.div
         className="phone-player-mockup"
-        initial={{ x: 100 }}
-        animate={{ x: -50 }}
-        transition={{ delay: 2 }}
+        initial={
+          isMobile ? phoneAnimation.mobile.initial : phoneAnimation.web.initial
+        }
+        animate={
+          isMobile ? phoneAnimation.mobile.animate : phoneAnimation.web.animate
+        }
+        transition={{ delay: 1 }}
       >
+        {console.log(phoneAnimation.web.animate)}
         {/* Beginning of the Video */}
 
         <Player
           url={myVideo}
           height="auto"
-          width="20vw"
+          width={isMobile ? "50vw" : "20vw"}
           controls
+          playing
           onProgress={(progress) => handleInstallationVideoProgress(progress)}
 
           // style={{ transform: "scale(1.1)" }}
@@ -121,9 +158,17 @@ const GetStarted = () => {
           {instructionOneDisplay && (
             <motion.div
               className="instruction"
-              initial={{ y: 200 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              initial={
+                isMobile
+                  ? instructionOneAnimation.mobile.initial
+                  : instructionOneAnimation.web.initial
+              }
+              animate={
+                isMobile
+                  ? instructionOneAnimation.mobile.animate
+                  : instructionOneAnimation.web.animate
+              }
+              transition={{ delay: 1, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
@@ -133,7 +178,7 @@ const GetStarted = () => {
                 <p>Download Reward-Adz from Playstore using the link below</p>
               </div>
               <div className="first-instruction-cta">
-                <img src={PlayStore} alt="" />
+                <img src={PlayStore} alt="PlayStore" />
                 <p>PlayStore</p>
               </div>
             </motion.div>
@@ -148,9 +193,17 @@ const GetStarted = () => {
           {instructionTwoDisplay && (
             <motion.div
               className="instruction"
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: -150 }}
-              transition={{ delay: 1.5, duration: 1 }}
+              initial={
+                isMobile
+                  ? instructionTwoAnimation.mobile.initial
+                  : instructionTwoAnimation.web.initial
+              }
+              animate={
+                isMobile
+                  ? instructionTwoAnimation.mobile.animate
+                  : instructionTwoAnimation.web.animate
+              }
+              transition={{ delay: 2, duration: 1 }}
               exit={{ opacity: 0, x: "100vw", y: 10 }}
             >
               <div className="instruction-head">
@@ -174,9 +227,17 @@ const GetStarted = () => {
           {instructionThreeDisplay && (
             <motion.div
               className="instruction"
-              initial={{ opacity: 0, y: 500 }}
-              animate={{ opacity: 1, y: 220 }}
-              transition={{ delay: 2.5, duration: 1 }}
+              initial={
+                isMobile
+                  ? instructionThreeAnimation.mobile.initial
+                  : instructionThreeAnimation.web.initial
+              }
+              animate={
+                isMobile
+                  ? instructionThreeAnimation.mobile.animate
+                  : instructionThreeAnimation.web.animate
+              }
+              transition={{ delay: 3, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
@@ -202,8 +263,16 @@ const GetStarted = () => {
           {instructionFourDisplay && (
             <motion.div
               className="instruction"
-              initial={{ opacity: 0, y: 500 }}
-              animate={{ opacity: 1, y: 300 }}
+              initial={
+                isMobile
+                  ? instructionFourAnimation.mobile.initial
+                  : instructionFourAnimation.web.initial
+              }
+              animate={
+                isMobile
+                  ? instructionFourAnimation.mobile.animate
+                  : instructionFourAnimation.web.animate
+              }
               transition={{ delay: 1.5, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >
@@ -227,8 +296,16 @@ const GetStarted = () => {
           {instructionFiveDisplay && (
             <motion.div
               className="instruction"
-              initial={{ opacity: 0, y: 500 }}
-              animate={{ opacity: 1, y: -50 }}
+              initial={
+                isMobile
+                  ? instructionFiveAnimation.mobile.initial
+                  : instructionFiveAnimation.web.initial
+              }
+              animate={
+                isMobile
+                  ? instructionFiveAnimation.mobile.animate
+                  : instructionFiveAnimation.web.animate
+              }
               transition={{ delay: 3, duration: 1 }}
               exit={{ opacity: 0, x: "100vw" }}
             >

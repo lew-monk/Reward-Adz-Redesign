@@ -197,7 +197,7 @@ Changes the  */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100vh;
     width: 100vw;
     background-color: #3464d6;
@@ -217,7 +217,7 @@ Changes the  */
     border-radius: 0;
   }
   .logo-img {
-    height: 3rem;
+    height: 2rem;
   }
   .side-nav {
     flex-direction: column;
@@ -489,7 +489,43 @@ Changes the  */
   color: #fff;
   font-family: "Courier Prime", monospace;
 }
-
+@media (max-width: 500px) {
+  .instructions {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .phone-player-mockup {
+    position: relative;
+    border: solid black 5px;
+    border-radius: 1rem;
+    margin: 1rem 0rem;
+    overflow: hidden;
+  }
+  .punchole {
+    height: 0.5rem;
+    width: 0.5rem;
+    top: 0.5rem;
+  }
+  .instruction-head {
+    font-size: 0.5rem;
+    width: 40ch;
+  }
+  .instruction-body {
+    font-size: 0.7rem;
+    line-height: normal;
+  }
+  .first-instruction-cta {
+    align-items: center;
+    justify-content: center;
+  }
+  .first-instruction-cta img {
+    width: 2rem;
+  }
+  .first-instruction-cta p {
+    margin: 0;
+  }
+}
 /* ! ------------------------------ About Styling ---------------------------------!   */
 .about-main {
   height: 100%;
