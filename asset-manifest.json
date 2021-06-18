@@ -1,27 +1,34 @@
 {
   "files": {
-    "main.css": "/Reward-Adz-Redesign/static/css/main.3a5da1ac.chunk.css",
-    "main.js": "/Reward-Adz-Redesign/static/js/main.c288c7c3.chunk.js",
-    "main.js.map": "/Reward-Adz-Redesign/static/js/main.c288c7c3.chunk.js.map",
+    "main.css": "/Reward-Adz-Redesign/static/css/main.5f349ea4.chunk.css",
+    "main.js": "/Reward-Adz-Redesign/static/js/main.0083c331.chunk.js",
+    "main.js.map": "/Reward-Adz-Redesign/static/js/main.0083c331.chunk.js.map",
     "runtime-main.js": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js",
     "runtime-main.js.map": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js.map",
     "static/js/2.cf8e0882.chunk.js": "/Reward-Adz-Redesign/static/js/2.cf8e0882.chunk.js",
     "static/js/2.cf8e0882.chunk.js.map": "/Reward-Adz-Redesign/static/js/2.cf8e0882.chunk.js.map",
     "index.html": "/Reward-Adz-Redesign/index.html",
-    "static/css/main.3a5da1ac.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.3a5da1ac.chunk.css.map",
+    "static/css/main.5f349ea4.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.5f349ea4.chunk.css.map",
     "static/js/2.cf8e0882.chunk.js.LICENSE.txt": "/Reward-Adz-Redesign/static/js/2.cf8e0882.chunk.js.LICENSE.txt",
     "static/media/David Rewardadz Promo-1.14c56d6f.m4v": "/Reward-Adz-Redesign/static/media/David Rewardadz Promo-1.14c56d6f.m4v",
     "static/media/Edited_20210608_221705.c73cb703.mp4": "/Reward-Adz-Redesign/static/media/Edited_20210608_221705.c73cb703.mp4",
     "static/media/Group 3.c49cbae8.svg": "/Reward-Adz-Redesign/static/media/Group 3.c49cbae8.svg",
+    "static/media/Iconly-Two-tone-Calling.3c98bf6f.svg": "/Reward-Adz-Redesign/static/media/Iconly-Two-tone-Calling.3c98bf6f.svg",
+    "static/media/Iconly-Two-tone-Chat.324752ce.svg": "/Reward-Adz-Redesign/static/media/Iconly-Two-tone-Chat.324752ce.svg",
     "static/media/Ronnie Rewardadz Promo-1.8a390d42.m4v": "/Reward-Adz-Redesign/static/media/Ronnie Rewardadz Promo-1.8a390d42.m4v",
+    "static/media/facebook.53fdeacc.svg": "/Reward-Adz-Redesign/static/media/facebook.53fdeacc.svg",
     "static/media/google-play-white.e02afba3.svg": "/Reward-Adz-Redesign/static/media/google-play-white.e02afba3.svg",
     "static/media/google-play.2ea6813c.svg": "/Reward-Adz-Redesign/static/media/google-play.2ea6813c.svg",
-    "static/media/rewards-promo.bb036a75.png": "/Reward-Adz-Redesign/static/media/rewards-promo.bb036a75.png"
+    "static/media/instagram.459e3529.svg": "/Reward-Adz-Redesign/static/media/instagram.459e3529.svg",
+    "static/media/linkedin.b8cfc7dd.svg": "/Reward-Adz-Redesign/static/media/linkedin.b8cfc7dd.svg",
+    "static/media/rewardadz-blue2.28689e68.svg": "/Reward-Adz-Redesign/static/media/rewardadz-blue2.28689e68.svg",
+    "static/media/rewards-promo.bb036a75.png": "/Reward-Adz-Redesign/static/media/rewards-promo.bb036a75.png",
+    "static/media/twitter.aad263cf.svg": "/Reward-Adz-Redesign/static/media/twitter.aad263cf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.cb06663c.js",
     "static/js/2.cf8e0882.chunk.js",
-    "static/css/main.3a5da1ac.chunk.css",
-    "static/js/main.c288c7c3.chunk.js"
+    "static/css/main.5f349ea4.chunk.css",
+    "static/js/main.0083c331.chunk.js"
   ]
 }
