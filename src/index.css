@@ -100,7 +100,7 @@ Changes the  */
 .side-bar {
   height: 100vh;
   display: flex;
-  width: 13%;
+  width: 15%;
 }
 .side-main {
   margin: 2rem 0rem 2rem 2rem;
@@ -232,16 +232,16 @@ Changes the  */
   .bar1,
   .bar2,
   .bar3 {
-    width: 35px;
-    height: 5px;
+    width: 32px;
+    height: 3px;
     background-color: #3464d6;
     margin: 6px 0;
     transition: 0.4s;
   }
 
   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+    transform: rotate(-45deg) translate(-5px, 4px);
   }
 
   .change .bar2 {
@@ -292,12 +292,14 @@ Changes the  */
 .landing-main {
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .home-main {
   position: relative;
   max-height: 96%;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +318,7 @@ Changes the  */
   background-color: rgb(27, 27, 27, 0.9);
 }
 .web-block {
-  display: flex;
+  display: none;
   height: 100%;
   width: 100%;
   align-items: center;
@@ -334,7 +336,7 @@ Changes the  */
   margin: 2rem;
 }
 .mobile-block {
-  display: none;
+  display: flex;
 }
 .header {
   font-size: 1rem;
@@ -342,18 +344,19 @@ Changes the  */
   font-family: "Montserrat", sans-serif;
 }
 .message-details {
-  width: 35ch;
-  padding: 4rem 0rem;
+  width: 40ch;
+  padding: 1rem 0rem;
   font-family: "Courier Prime", monospace;
 }
 .get-started-cta {
   background-color: transparent;
   border: 1px white solid;
   font-size: 1.2rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 2rem;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 .main-cta {
   position: absolute;
@@ -379,14 +382,14 @@ Changes the  */
   .home-main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     height: 100%;
     width: 100%;
   }
   .video1 {
     width: 100%;
-    height: 75%;
+    height: 50%;
   }
   .web-block {
     display: none;
@@ -405,9 +408,9 @@ Changes the  */
     width: 100%;
   }
   .info-block-one {
-    height: 25%;
+    height: 50%;
     position: relative;
-    margin-bottom: 6rem;
+    margin-bottom: 0rem;
     background-color: transparent;
   }
   .header h1 {
@@ -415,15 +418,22 @@ Changes the  */
   }
   .message-details {
     padding: 0.5rem 0rem;
+    width: 35ch;
   }
   .info-block-one p {
     color: black;
+  }
+  .cta {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
   }
   .get-started-cta {
     border: #3464d6 1px solid;
     color: black;
     font-size: 0.7rem;
     padding: 0.5rem 1rem;
+    cursor: pointer;
   }
 }
 
@@ -530,8 +540,132 @@ Changes the  */
 .about-main {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.columns-container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.logo-full {
+  margin-bottom: 3rem;
+}
+.google-play {
+  margin-bottom: 3rem;
+}
+.google-play img {
+  width: 35%;
+}
+.calling {
+  display: flex;
+  height: 10%;
+  align-items: center;
+}
+.call-icon {
+  background-color: #3464d6;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.call-text {
+  margin: 0rem 1rem;
+}
+.call-text p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.column-header {
+  margin-bottom: 2rem;
+}
+.column-header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.column-links > div {
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.social-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.social-links > img {
+  margin-right: 1rem;
+  height: 30px;
+}
+.legal {
+  margin-left: 10rem;
+}
+.legal > div {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+}
+@media (max-width: 500px) {
+  .column {
+    flex: 1;
+  }
+  .columns-container {
+    justify-content: space-evenly;
+    width: 90%;
+  }
+  .logo-full {
+    margin-bottom: 0.5rem;
+  }
+  .logo-full img {
+    width: 60%;
+  }
+  .google-play {
+    margin-bottom: 0.5rem;
+  }
+  .google-play img {
+    width: 35%;
+  }
+  .calling {
+    margin-bottom: 0.5rem;
+  }
+  .call-icon {
+    height: 20px;
+    width: 20px;
+  }
+  .call-icon img {
+    width: 50%;
+  }
+  .call-text p {
+    font-size: 0.5rem;
+  }
+  .column-header h1 {
+    font-size: 0.7rem;
+  }
+  .column-links > div {
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .social-links-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .legal {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+  .legal > div {
+    font-size: 0.5rem;
+  }
+  .social-links > img {
+    margin-right: 1rem;
+    height: 20px;
+  }
+}
 /* ! ------------------------------ Contact Styling ---------------------------------!   */
 
 /* ! ------------------------------ Content Styling ---------------------------------!   */

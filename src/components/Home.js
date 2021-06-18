@@ -7,7 +7,7 @@ import Player from "react-player";
 
 //Local Imports
 import GooglePlay from "../Images/google-play-white.svg";
-import myVideo from "../assets/videos/David Rewardadz Promo-1.m4v";
+import myVideo from "../assets/videos/Ronnie Rewardadz Promo-1.m4v";
 import Poster from "../assets/videos/rewards-promo.png";
 
 const Home = () => {
@@ -28,6 +28,9 @@ const Home = () => {
   //State to control the Main cta display
   const [ctaDisplay, setCtaDisplay] = useState(false);
 
+  //State to Pause Video
+  const [playVideo, setPlayVideo] = useState(true);
+
   //Create a ref to for the video
   const ref = createRef();
 
@@ -35,26 +38,31 @@ const Home = () => {
   const handleVideoProgress = (progress) => {
     setPlayedSeconds(progress.playedSeconds);
 
-    if (playedSeconds >= 15 && playedSeconds <= 16) {
+    if (playedSeconds >= 6 && playedSeconds <= 7) {
       setInfoPopUp(true);
     }
     //Mobile Information Pop Up Controll
-    if (playedSeconds >= 15 && playedSeconds <= 17) {
+    if (playedSeconds >= 7 && playedSeconds <= 8) {
+      setInformationTwoDisplay(false);
+      setInformationThreeDisplay(false);
       setInformationOneDisplay(true);
-      setInformationTwoDisplay(false);
-      setInformationThreeDisplay(false);
+      setPlayVideo(false);
     }
-    if (playedSeconds >= 24 && playedSeconds <= 26) {
+    if (playedSeconds >= 14 && playedSeconds <= 15) {
       setInformationOneDisplay(false);
+      setInformationThreeDisplay(false);
+      setInfoPopUp(true);
       setInformationTwoDisplay(true);
-      setInformationThreeDisplay(false);
+      setPlayVideo(false);
     }
-    if (playedSeconds >= 32 && playedSeconds <= 34) {
+    if (playedSeconds >= 21 && playedSeconds <= 22) {
       setInformationOneDisplay(false);
       setInformationTwoDisplay(false);
+      setInfoPopUp(true);
       setInformationThreeDisplay(true);
+      setPlayVideo(false);
     }
-    if (playedSeconds > 38) {
+    if (playedSeconds > 28) {
       setInformationOneDisplay(false);
       setInformationTwoDisplay(false);
       setInformationThreeDisplay(false);
@@ -62,7 +70,7 @@ const Home = () => {
     if (playedSeconds >= 44 && playedSeconds <= 46) {
       setInfoPopUp(false);
     }
-    if (playedSeconds > 47) {
+    if (playedSeconds > 25) {
       setFilter({ filter: "blur(5px)" });
       setCtaDisplay(true);
     }
@@ -71,9 +79,15 @@ const Home = () => {
       setFilter({});
     }
   };
-
+  //
   const handleVideoEnd = () => {
     setFilter({});
+  };
+
+  //Function to handle video Pause for Instruction One
+  const handleFirstInstructionPause = () => {
+    setPlayVideo(true);
+    setInfoPopUp(false);
   };
 
   return (
@@ -95,7 +109,7 @@ const Home = () => {
             url={myVideo}
             height="100%"
             width="100%"
-            playing
+            playing={playVideo}
             onProgress={(played) => handleVideoProgress(played)}
             config={{
               file: {
@@ -135,9 +149,9 @@ const Home = () => {
                     </div>
                     <div className="message">
                       <p className="message-details">
-                        At Reward Adz we aim to re evaluate how we consume and
-                        send adz. <br /> Want to get Organic ads and reach? Want
-                        to make money watching ads?
+                        Reward Adz is disrupting traditional forms of
+                        advertising to create value for both the advertiser and
+                        the consumer
                       </p>
                       <div className="cta">
                         <input
@@ -216,22 +230,25 @@ const Home = () => {
                       className="info-details-mobile"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 1 }}
+                      transition={{ delay: 0.2 }}
                     >
                       <div className="header">
                         <h1>Re- Evaluate</h1>
                       </div>
                       <div className="message">
                         <p className="message-details">
-                          At Reward Adz we aim to re evaluate how we consume and
-                          send adz. <br /> Want to get Organic ads and reach?
-                          Want to make money watching ads?
+                          Reward Adz is disrupting traditional forms of
+                          advertising to create value for both the advertiser
+                          and the consumer
                         </p>
-                        <div className="cta">
+                        <div
+                          className="cta"
+                          onClick={handleFirstInstructionPause}
+                        >
                           <input
                             type="button"
                             className="get-started-cta"
-                            value="Get started"
+                            value="Continue"
                           />
                         </div>
                       </div>
@@ -254,15 +271,22 @@ const Home = () => {
                       </div>
                       <div className="message">
                         <p className="message-details">
-                          At Reward Adz we aim to re evaluate how we consume and
-                          send adz. <br /> Want to get Organic ads and reach?
-                          Consult at rewards Adz to know how
+                          Consumers don’t really see/hear ads. We drive past the
+                          same billboards on our daily commute while paying no
+                          attention.
+                          <br /> <br />
+                          Incentivizing consumers to engage with ad content and
+                          rewarding them for it is where the adverts start to
+                          impact the target market.
                         </p>
-                        <div className="cta">
+                        <div
+                          className="cta"
+                          onClick={handleFirstInstructionPause}
+                        >
                           <input
                             type="button"
                             className="get-started-cta"
-                            value="Get Reach"
+                            value="Continue"
                           />
                         </div>
                       </div>
@@ -281,15 +305,19 @@ const Home = () => {
                       transition={{ delay: 1 }}
                     >
                       <div className="header">
-                        <h1>Watch Adz</h1>
+                        <h1>Consume Adz</h1>
                       </div>
                       <div className="message">
                         <p className="message-details">
-                          Do you feel exposed watching adz? <br />
-                          How about make money by watching adz. <br /> With
-                          rewards Adz you can get paid by consuming ads.
+                          Do you feel exposed watching unneccessary adz? <br />
+                          <br />
+                          Take control by consuming adz that you believe in and
+                          get rewarded for it
                         </p>
-                        <div className="cta">
+                        <div
+                          className="cta"
+                          onClick={handleFirstInstructionPause}
+                        >
                           <input
                             type="button"
                             className="get-started-cta"

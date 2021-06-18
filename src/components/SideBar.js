@@ -13,7 +13,7 @@ const activeStyles = {
 
 const SideBar = ({ setComponent }) => {
   //State to handle Active Link
-  const [homeActive, setHomeACtive] = useState(false);
+  const [homeActive, setHomeACtive] = useState(true);
   const [getStartedActive, setGetStartedActive] = useState(false);
   const [contentActive, setContentActive] = useState(false);
   const [aboutActive, setAboutActive] = useState(false);
