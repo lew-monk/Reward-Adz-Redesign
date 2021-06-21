@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Reward-Adz-Redesign/static/css/main.14d9fc15.chunk.css",
-    "main.js": "/Reward-Adz-Redesign/static/js/main.8175cf65.chunk.js",
-    "main.js.map": "/Reward-Adz-Redesign/static/js/main.8175cf65.chunk.js.map",
+    "main.js": "/Reward-Adz-Redesign/static/js/main.02ca54c7.chunk.js",
+    "main.js.map": "/Reward-Adz-Redesign/static/js/main.02ca54c7.chunk.js.map",
     "runtime-main.js": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js",
     "runtime-main.js.map": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js.map",
     "static/js/2.1e1112fa.chunk.js": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.cb06663c.js",
     "static/js/2.1e1112fa.chunk.js",
     "static/css/main.14d9fc15.chunk.css",
-    "static/js/main.8175cf65.chunk.js"
+    "static/js/main.02ca54c7.chunk.js"
   ]
 }
