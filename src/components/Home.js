@@ -118,13 +118,13 @@ const Home = ({ ready }) => {
             loop
             onReady={handleHomeVideoBuffer}
             onProgress={(played) => handleVideoProgress(played)}
-            // config={{
-            //   file: {
-            //     attributes: {
-            //       poster: Poster,
-            //     },
-            //   },
-            // }}
+            config={{
+              file: {
+                attributes: {
+                  poster: Poster,
+                },
+              },
+            }}
             onEnded={handleVideoEnd}
           />
         </div>
