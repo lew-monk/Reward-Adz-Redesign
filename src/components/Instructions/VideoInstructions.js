@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 //Local Imports
 import myVideo from "../../assets/videos/David Rewardadz Promo-1.m4v";
-import Intro from "../Intro";
 
 const VideoInstructions = () => {
   //States to control Instructions display
@@ -18,7 +17,6 @@ const VideoInstructions = () => {
 
   //State to control video progress
   const [videoProgess, setVideoProgress] = useState(0);
-  const [ready, setReady] = useState(false);
 
   //Function to handle Video Progress
   const handleInstructionVideoProgress = (time) => {
@@ -51,11 +49,6 @@ const VideoInstructions = () => {
     }
   };
 
-  //Function to remove loading state once videa is ready
-  const handleVideoInstructionsReady = () => {
-    setReady(true);
-  };
-
   return (
     //Beginning of the Video Instructions Component
     <motion.div
@@ -72,7 +65,6 @@ const VideoInstructions = () => {
           playing
           height="100%"
           width="100%"
-          onReady={handleVideoInstructionsReady}
           onProgress={(progress) => handleInstructionVideoProgress(progress)}
         />
       </div>
