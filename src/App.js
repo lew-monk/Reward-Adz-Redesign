@@ -17,13 +17,18 @@ import Content from "./components/Content";
 function App() {
   //State to use in the Switch statememt
   const [componentDeterminor, setComponentDeterminor] = useState("home");
+  const [buffering, setBuffering] = useState(false);
 
+  //function to set buffer to true when video starts to buffering
+  const setBufferingTrue = () => {
+    setBuffering(true);
+  };
   //Switch case to switch different components
   //based on the clicked navigation
   const swicthComponents = () => {
     switch (componentDeterminor) {
       case "home":
-        return <Home />;
+        return <Home ready={setBufferingTrue} />;
       case "content":
         return <Content />;
       case "getStarted":
@@ -42,7 +47,7 @@ function App() {
       {/* Beginning of the animated Intro */}
 
       <motion.div
-        animate={{ x: "100vw" }}
+        animate={{ x: buffering ? "100vw" : "" }}
         transition={{ delay: 3.2, duration: 1 }}
         className="intro"
       >
@@ -60,7 +65,7 @@ function App() {
           animate={{
             transform: "translateX(200px)",
           }}
-          transition={{ delay: 2.5, duration: 1.5 }}
+          transition={{ delay: 2.4, duration: 1.5 }}
         >
           <SideBar setComponent={setComponentDeterminor} />
         </motion.div>
@@ -75,7 +80,7 @@ function App() {
             transform: "translateX(200px)",
             transitionEnd: { opacity: 1 },
           }}
-          transition={{ delay: 2.4, duration: 1 }}
+          transition={{ delay: 2.6, duration: 1 }}
           exit={{ x: "-100vw" }}
         >
           {swicthComponents()}

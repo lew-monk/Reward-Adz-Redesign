@@ -10,7 +10,7 @@ import GooglePlay from "../Images/google-play-white.svg";
 import myVideo from "../assets/videos/Ronnie Rewardadz Promo-1.m4v";
 import Poster from "../assets/videos/rewards-promo.png";
 
-const Home = () => {
+const Home = ({ ready }) => {
   //States to control Mobile Instructions
   const [informatioOneDisplay, setInformationOneDisplay] = useState(false);
   const [informatioTwoDisplay, setInformationTwoDisplay] = useState(false);
@@ -90,6 +90,11 @@ const Home = () => {
     setInfoPopUp(false);
   };
 
+  //Function to handle loading state
+  const handleHomeVideoBuffer = () => {
+    ready();
+  };
+
   return (
     // Beginning of the Introduction Video
     <div className="landing-main">
@@ -110,6 +115,8 @@ const Home = () => {
             height="100%"
             width="100%"
             playing={playVideo}
+            // controls
+            onReady={handleHomeVideoBuffer}
             onProgress={(played) => handleVideoProgress(played)}
             config={{
               file: {
