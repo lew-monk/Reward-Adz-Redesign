@@ -54,7 +54,7 @@ const GetStarted = () => {
 
     //Third Instructions is animated in and
     //Second Instructions is animated out
-    if (installationVideoTime >= 25 && installationVideoTime < 27) {
+    if (installationVideoTime >= 24 && installationVideoTime < 26) {
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionFourDisplay(false);
@@ -64,7 +64,7 @@ const GetStarted = () => {
 
     //Fourth Instructions is animated in and
     //Third Instruction is animated out
-    if (installationVideoTime > 29 && installationVideoTime < 34) {
+    if (installationVideoTime > 32 && installationVideoTime < 34) {
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionThreeDisplay(false);
@@ -169,7 +169,7 @@ const GetStarted = () => {
                   : instructionOneAnimation.web.animate
               }
               transition={{ delay: 1, duration: 1 }}
-              exit={{ opacity: 0, x: "100vw" }}
+              // exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
                 <h1>PlayStore</h1>
@@ -204,7 +204,7 @@ const GetStarted = () => {
                   : instructionTwoAnimation.web.animate
               }
               transition={{ delay: 2, duration: 1 }}
-              exit={{ opacity: 0, x: "100vw", y: 10 }}
+              // exit={{ opacity: 0, x: "100vw", y: 10 }}
             >
               <div className="instruction-head">
                 <h1>Download Reward-Adz</h1>
@@ -238,7 +238,7 @@ const GetStarted = () => {
                   : instructionThreeAnimation.web.animate
               }
               transition={{ delay: 3, duration: 1 }}
-              exit={{ opacity: 0, x: "100vw" }}
+              // exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
                 <h1>Allow the neccessary permissions</h1>
@@ -274,7 +274,7 @@ const GetStarted = () => {
                   : instructionFourAnimation.web.animate
               }
               transition={{ delay: 1.5, duration: 1 }}
-              exit={{ opacity: 0, x: "100vw" }}
+              // exit={{ opacity: 0, x: "100vw" }}
             >
               <div className="instruction-head">
                 <h1>Log in ? Register ?</h1>

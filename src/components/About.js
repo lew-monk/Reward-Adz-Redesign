@@ -94,10 +94,26 @@ const About = () => {
           </div>
         </div>
         <div className="social-links">
-          <img src={FaceBook} alt="Facebook" />
-          <img src={LinkedIn} alt="LinkedIn" />
-          <img src={Instagram} alt="Instagram" />
-          <img src={Twitter} alt="Twitter" />
+          <div>
+            <a href="https://www.facebook.com/RewardAdz-112412383994348">
+              <img src={FaceBook} alt="Facebook" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/company/reward-adz/?viewAsMember=true">
+              <img src={Instagram} alt="LinkedIn" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/rewardadz/">
+              <img src={LinkedIn} alt="Instagram" />
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/RewardAdz">
+              <img src={Twitter} alt="Twitter" />
+            </a>
+          </div>
         </div>
       </div>
 

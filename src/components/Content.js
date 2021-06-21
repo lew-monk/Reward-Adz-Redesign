@@ -19,6 +19,7 @@ const Content = () => {
 
   //State to store Selector styles onClick
   const [selectorOpacity, setSelectorOpacity] = useState(false);
+  const [selectorAudioOpacity, setSelectorAudioOpacity] = useState(false);
 
   //Function to add under line on click
   const handleVideoOnClickSelector = () => {
@@ -28,7 +29,7 @@ const Content = () => {
 
   //Function to add under line on click
   const handleAudioOnClickSelector = () => {
-    setSelectorOpacity(true);
+    setSelectorAudioOpacity(true);
     setVideoComponentDeterminor("audio");
   };
 
@@ -80,7 +81,8 @@ const Content = () => {
         <div
           className="content-selector"
           onClick={handleAudioOnClickSelector}
-          style={selectorOpacity ? stylesOnSelectorClick : {}}
+          style={selectorAudioOpacity ? stylesOnSelectorClick : {}}
+          // style={{ backgroundColor: "greenyellow" }}
         >
           <div className="content-selector-number">
             <h1>2</h1>
