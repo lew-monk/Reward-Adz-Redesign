@@ -115,7 +115,7 @@ const Home = ({ ready }) => {
             height="100%"
             width="100%"
             playing={playVideo}
-            // controls
+            loop
             onReady={handleHomeVideoBuffer}
             onProgress={(played) => handleVideoProgress(played)}
             config={{
