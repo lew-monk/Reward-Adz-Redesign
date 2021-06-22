@@ -898,7 +898,8 @@ Changes the  */
 }
 .form-input > input {
   width: 90%;
-  border: #d3d3d5 solid 1px;
+  border: #e5e6e9 2px solid;
+  box-shadow: #f7f8fc 0px 3px 4px inset;
 }
 
 .form-input input {
@@ -907,13 +908,15 @@ Changes the  */
 input[type="text"],
 textarea,
 input[type="email"]:focus {
-  border-style: inset;
+  border-style: solid;
   outline-color: #3464d6;
+  outline-width: 2px;
 }
 input {
   width: 90%;
   display: block;
   margin: auto;
+  border: black solid 1px;
 }
 .email-section {
   margin-bottom: 1rem;
@@ -928,6 +931,8 @@ textarea {
   width: 90%;
   display: block;
   margin: auto;
+  border: #e5e6e9 solid 2px;
+  box-shadow: #f7f8fc 0px 3px 4px inset;
 }
 .submit-contact {
   width: 100%;
