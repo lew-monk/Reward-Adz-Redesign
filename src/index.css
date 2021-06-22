@@ -125,13 +125,13 @@ Changes the  */
 }
 .logo {
   background-color: var(--white);
-  width: 150px;
-  height: 150px;
-  border-radius: 3.5rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .logo-img {
   width: 70%;
