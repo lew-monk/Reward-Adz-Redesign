@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Reward-Adz-Redesign/static/css/main.2c82c84e.chunk.css",
+    "main.css": "/Reward-Adz-Redesign/static/css/main.5e28f7b8.chunk.css",
     "main.js": "/Reward-Adz-Redesign/static/js/main.d26cc489.chunk.js",
     "main.js.map": "/Reward-Adz-Redesign/static/js/main.d26cc489.chunk.js.map",
     "runtime-main.js": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js",
@@ -8,7 +8,7 @@
     "static/js/2.1e1112fa.chunk.js": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js",
     "static/js/2.1e1112fa.chunk.js.map": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js.map",
     "index.html": "/Reward-Adz-Redesign/index.html",
-    "static/css/main.2c82c84e.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.2c82c84e.chunk.css.map",
+    "static/css/main.5e28f7b8.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.5e28f7b8.chunk.css.map",
     "static/js/2.1e1112fa.chunk.js.LICENSE.txt": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js.LICENSE.txt",
     "static/media/David Rewardadz Promo-1.14c56d6f.m4v": "/Reward-Adz-Redesign/static/media/David Rewardadz Promo-1.14c56d6f.m4v",
     "static/media/Edited_20210608_221705.c73cb703.mp4": "/Reward-Adz-Redesign/static/media/Edited_20210608_221705.c73cb703.mp4",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.cb06663c.js",
     "static/js/2.1e1112fa.chunk.js",
-    "static/css/main.2c82c84e.chunk.css",
+    "static/css/main.5e28f7b8.chunk.css",
     "static/js/main.d26cc489.chunk.js"
   ]
 }
