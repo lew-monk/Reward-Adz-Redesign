@@ -22,30 +22,36 @@ const VideoInstructions = () => {
   const handleInstructionVideoProgress = (time) => {
     setVideoProgress(time.playedSeconds);
 
-    if (videoProgess >= 0 && videoProgess <= 16) {
+    if (videoProgess >= 0 && videoProgess <= 2) {
       setInstructionThreeDisplay(false);
       setInstructionFourDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionOneDisplay(true);
     }
 
-    if (videoProgess >= 17 && videoProgess <= 25) {
+    if (videoProgess >= 7 && videoProgess <= 9) {
       setInstructionThreeDisplay(false);
       setInstructionFourDisplay(false);
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(true);
     }
-    if (videoProgess >= 26 && videoProgess <= 30) {
+    if (videoProgess >= 13 && videoProgess <= 15) {
       setInstructionFourDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionOneDisplay(false);
       setInstructionThreeDisplay(true);
     }
-    if (videoProgess > 33) {
+    if (videoProgess > 24) {
       setInstructionThreeDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionOneDisplay(false);
       setInstructionFourDisplay(true);
+    }
+    if (videoProgess > 30) {
+      setInstructionThreeDisplay(false);
+      setInstructionTwoDisplay(false);
+      setInstructionOneDisplay(false);
+      setInstructionFourDisplay(false);
     }
   };
 
@@ -78,8 +84,8 @@ const VideoInstructions = () => {
           transition={{ delay: 1 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction one</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">1</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -87,9 +93,8 @@ const VideoInstructions = () => {
             transition={{ delay: 1.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Open th application and ensure all permissions required have been
+              granted i.e. location, contacts etc.
             </p>
           </motion.div>
         </motion.div>
@@ -104,8 +109,8 @@ const VideoInstructions = () => {
           transition={{ delay: 0.5 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction Two</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">2</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -113,9 +118,9 @@ const VideoInstructions = () => {
             transition={{ delay: 0.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Choose an audio file from the organisation that hits home the
+              most.🎼🎧
+              <br />
             </p>
           </motion.div>
         </motion.div>
@@ -130,8 +135,8 @@ const VideoInstructions = () => {
           transition={{ delay: 0.5 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction Third</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">3</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -139,9 +144,8 @@ const VideoInstructions = () => {
             transition={{ delay: 0.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Set the Audio Ad as your ringtone and <br /> Let the Ad ring to
+              Earn😅
             </p>
           </motion.div>
         </motion.div>
@@ -156,8 +160,8 @@ const VideoInstructions = () => {
           transition={{ delay: 0.5 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction Four</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">4</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -165,9 +169,7 @@ const VideoInstructions = () => {
             transition={{ delay: 0.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Not ring alone but also you can listen to adverts and earn
             </p>
           </motion.div>
         </motion.div>

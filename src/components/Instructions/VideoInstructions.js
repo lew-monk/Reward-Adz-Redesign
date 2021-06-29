@@ -35,13 +35,13 @@ const VideoInstructions = () => {
       setInstructionOneDisplay(false);
       setInstructionTwoDisplay(true);
     }
-    if (videoProgess >= 26 && videoProgess <= 30) {
+    if (videoProgess >= 33 && videoProgess <= 34) {
       setInstructionFourDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionOneDisplay(false);
       setInstructionThreeDisplay(true);
     }
-    if (videoProgess > 33) {
+    if (videoProgess > 39) {
       setInstructionThreeDisplay(false);
       setInstructionTwoDisplay(false);
       setInstructionOneDisplay(false);
@@ -78,8 +78,8 @@ const VideoInstructions = () => {
           transition={{ delay: 1 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction one</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">1</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -87,9 +87,8 @@ const VideoInstructions = () => {
             transition={{ delay: 1.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Open th application and ensure all permissions required have been
+              granted i.e. location, contacts etc.
             </p>
           </motion.div>
         </motion.div>
@@ -104,8 +103,8 @@ const VideoInstructions = () => {
           transition={{ delay: 0.5 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction Two</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">2</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -113,9 +112,9 @@ const VideoInstructions = () => {
             transition={{ delay: 0.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Choose a video ad from the organisation that hits home the most.
+              <br />
+              Watch and Learn the service being advertised
             </p>
           </motion.div>
         </motion.div>
@@ -130,8 +129,8 @@ const VideoInstructions = () => {
           transition={{ delay: 0.5 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction Third</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">3</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -139,9 +138,8 @@ const VideoInstructions = () => {
             transition={{ delay: 0.5 }}
           >
             <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
+              Participate in a survey to show that you fully understand the
+              service being advertised
             </p>
           </motion.div>
         </motion.div>
@@ -156,19 +154,15 @@ const VideoInstructions = () => {
           transition={{ delay: 0.5 }}
           className="video-instructions"
         >
-          <div>
-            <h1 className="video-instructions-header">Instruction Four</h1>
+          <div className="instruction-number">
+            <h1 className="video-instructions-header">4</h1>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <p className="video-instructions-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
-              et repellat saepe ullam sint, accusantium assumenda optio!
-              Ducimus, molestiae laudantium!
-            </p>
+            <p className="video-instructions-body">Sit back relax and earn</p>
           </motion.div>
         </motion.div>
       )}

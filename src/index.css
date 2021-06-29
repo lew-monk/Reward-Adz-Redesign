@@ -769,6 +769,8 @@ Changes the  */
   }
   .content-selector {
     align-items: center;
+    padding: 0rem 1rem;
+    border-radius: 1rem;
   }
 }
 /* ! ------------------------------ Video Instructions Styling ---------------------------------!   */
@@ -793,21 +795,32 @@ Changes the  */
   justify-content: center;
   align-items: flex-start;
   position: absolute;
-  top: 0%;
-  right: 6%;
-  height: 100%;
+  top: 70%;
+  left: 35%;
+  /* height: 20%; */
   background-color: rgb(27, 27, 27, 0.9);
+  padding: 1rem 0rem;
+}
+.instruction-number {
+  height: 2rem;
+  width: 2rem;
+  border: #3464d6 2px solid;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 1rem;
 }
 .video-instructions-header {
   font-family: "Montserrat", sans-serif;
   color: #3464d6;
-  margin: 0;
-  padding: 0rem 1rem;
+  /* margin: 0; */
+  /* padding: 0rem 1rem; */
 }
 .video-instructions-body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  margin: 0rem 1rem;
+  margin: 1rem 1rem 0rem 1rem;
   width: 35ch;
   color: #fff;
 }
@@ -816,6 +829,7 @@ Changes the  */
   .video-instructions-main {
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
   }
   .video-instructions-video {
     width: 100%;
@@ -825,12 +839,13 @@ Changes the  */
     font-size: 1rem;
   }
   .video-instructions {
-    margin: 0rem 0rem 6rem 2rem;
+    /* margin: 0rem 0rem 6rem 2rem; */
     font-size: 0.5rem;
     position: relative;
     background-color: #fff;
-    top: 0%;
-    right: 0%;
+    top: -10%;
+    left: 0%;
+    /* height: 100%; */
   }
   .video-instructions-body {
     width: 80%;
