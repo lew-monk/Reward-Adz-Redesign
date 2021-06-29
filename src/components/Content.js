@@ -9,7 +9,7 @@ import VideoInstructions from "./Instructions/VideoInstructions";
 
 const stylesOnSelectorClick = {
   opacity: 1,
-  borderBottom: "2px solid black",
+  // borderBottom: "2px solid black",
 };
 
 const Content = () => {
@@ -63,14 +63,14 @@ const Content = () => {
           onClick={handleVideoOnClickSelector}
           style={stylesOnSelectorClick}
         >
-          <div className="content-selector-number">
+          {/* <div className="content-selector-number">
             <div>
               <h1>1</h1>
             </div>
-          </div>
+          </div> */}
           <div className="content-selector-info">
             <h1 className="content-selector-head">Video Adz</h1>
-            <p className="content-selector-description">Consume Video Ads?</p>
+            {/* <p className="content-selector-description">Consume Video Ads?</p> */}
           </div>
         </div>
 
@@ -84,12 +84,12 @@ const Content = () => {
           style={selectorAudioOpacity ? stylesOnSelectorClick : {}}
           // style={{ backgroundColor: "greenyellow" }}
         >
-          <div className="content-selector-number">
+          {/* <div className="content-selector-number">
             <h1>2</h1>
-          </div>
+          </div> */}
           <div className="content-selector-info">
-            <h1 className="content-selector-head">Audio Adz</h1>
-            <p className="content-selector-description">Listen and Earn?</p>
+            <h1 className="content-selector-head">Ringtone</h1>
+            {/* <p className="content-selector-description">Listen and Earn?</p> */}
           </div>
         </div>
 
@@ -98,12 +98,24 @@ const Content = () => {
         {/* Beginning of Content Selector  */}
 
         <div className="content-selector">
-          <div className="content-selector-number">
+          {/* <div className="content-selector-number">
             <h1>3</h1>
+          </div> */}
+          <div className="content-selector-info">
+            <h1 className="content-selector-head">Banner</h1>
+            {/* <p className="content-selector-description">Fill Answers</p> */}
           </div>
+        </div>
+        {/* End of Content Selector  */}
+        {/* Beginning of Content Selector  */}
+
+        <div className="content-selector">
+          {/* <div className="content-selector-number">
+            <h1>3</h1>
+          </div> */}
           <div className="content-selector-info">
             <h1 className="content-selector-head">Survey</h1>
-            <p className="content-selector-description">Fill Answers</p>
+            {/* <p className="content-selector-description">Fill Answers</p> */}
           </div>
         </div>
         {/* End of Content Selector  */}

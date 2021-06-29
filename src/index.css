@@ -693,7 +693,7 @@ Changes the  */
   align-items: flex-start;
   position: relative;
   overflow: hidden;
-  margin-left: -4rem;
+  margin-left: -5rem;
 }
 .video {
   height: 100%;
@@ -708,8 +708,12 @@ Changes the  */
 .content-selector {
   display: flex;
   cursor: pointer;
-  border-bottom: 1px solid rgb(204, 202, 202);
+  /* border-bottom: 1px solid rgb(204, 202, 202); */
   opacity: 0.3;
+  background-color: #3464d6;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
 }
 .content-selector-number {
   display: flex;
@@ -790,7 +794,7 @@ Changes the  */
   align-items: flex-start;
   position: absolute;
   top: 0%;
-  right: 5%;
+  right: 6%;
   height: 100%;
   background-color: rgb(27, 27, 27, 0.9);
 }
