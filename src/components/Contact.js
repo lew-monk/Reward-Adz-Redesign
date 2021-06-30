@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+
+//Package imports
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [addAdvertDisplay, setAddAdvertDisplay] = useState(false);
+  const [recieveWithdrawDisplay, setRecieveWithdrawDisplay] = useState(false);
+  const [dashboard, setDashboard] = useState(false);
+
+  //Functions to control the display of the help instructions
+  const handleAddAdvertDisplay = () => {
+    addAdvertDisplay ? setAddAdvertDisplay(false) : setAddAdvertDisplay(true);
+  };
+
+  const handleRecieveWithdrawDisplay = () => {
+    recieveWithdrawDisplay
+      ? setRecieveWithdrawDisplay(false)
+      : setRecieveWithdrawDisplay(true);
+  };
+
+  const handeDashboardDisplay = () => {
+    dashboard ? setDashboard(false) : setDashboard(true);
+  };
+
   return (
     //Beginning of the contact page render
 
@@ -107,39 +129,117 @@ const Contact = () => {
         <div className="topics">
           {/* Beginning of the first Topic  */}
 
-          <div className="topic">
+          <div className="topic" onClick={handleAddAdvertDisplay}>
             <div className="topic-header">
               <h3>Add an Advert</h3>
             </div>
             <div className="topic-sub">
               <p>Instructions on how to add or place adverts</p>
             </div>
+            {addAdvertDisplay && (
+              <motion.div
+                initial={{ y: "-10%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="topic-instruction">
+                  <p>
+                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+                <div className="topic-instruction">
+                  <p>
+                    2. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+                <div className="topic-instruction">
+                  <p>
+                    3. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+              </motion.div>
+            )}
           </div>
 
           {/* End of the first Topic  */}
 
           {/* Beginning of the Second Topic  */}
 
-          <div className="topic">
+          <div className="topic" onClick={handleRecieveWithdrawDisplay}>
             <div className="topic-header">
-              <h3>Recieve / Withdwar Payment</h3>
+              <h3>Recieve / Withdraw Payment</h3>
             </div>
             <div className="topic-sub">
               <p>Get and understand more how the payment system works</p>
             </div>
+            {recieveWithdrawDisplay && (
+              <motion.div
+                initial={{ y: "-10%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="topic-instruction">
+                  <p>
+                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+                <div className="topic-instruction">
+                  <p>
+                    2. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+                <div className="topic-instruction">
+                  <p>
+                    3. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+              </motion.div>
+            )}
           </div>
 
           {/* End of the Second Topic  */}
 
           {/* Beginning of the Third Topic  */}
 
-          <div className="topic">
+          <div className="topic" onClick={handeDashboardDisplay}>
             <div className="topic-header">
               <h3>Dashboards and Metrics</h3>
             </div>
             <div className="topic-sub">
               <p>Learn more how to understand and relate to the audience</p>
             </div>
+            {dashboard && (
+              <motion.div
+                initial={{ y: "-10%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="topic-instruction">
+                  <p>
+                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+                <div className="topic-instruction">
+                  <p>
+                    2. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+                <div className="topic-instruction">
+                  <p>
+                    3. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, consequuntur.
+                  </p>
+                </div>
+              </motion.div>
+            )}
           </div>
 
           {/* End of the Third Topic  */}
