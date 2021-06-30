@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Reward-Adz-Redesign/static/css/main.5130ded6.chunk.css",
-    "main.js": "/Reward-Adz-Redesign/static/js/main.bf66b7bf.chunk.js",
-    "main.js.map": "/Reward-Adz-Redesign/static/js/main.bf66b7bf.chunk.js.map",
+    "main.css": "/Reward-Adz-Redesign/static/css/main.2a0c6211.chunk.css",
+    "main.js": "/Reward-Adz-Redesign/static/js/main.e61b1338.chunk.js",
+    "main.js.map": "/Reward-Adz-Redesign/static/js/main.e61b1338.chunk.js.map",
     "runtime-main.js": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js",
     "runtime-main.js.map": "/Reward-Adz-Redesign/static/js/runtime-main.cb06663c.js.map",
-    "static/js/2.1e1112fa.chunk.js": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js",
-    "static/js/2.1e1112fa.chunk.js.map": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js.map",
+    "static/js/2.59fe61ac.chunk.js": "/Reward-Adz-Redesign/static/js/2.59fe61ac.chunk.js",
+    "static/js/2.59fe61ac.chunk.js.map": "/Reward-Adz-Redesign/static/js/2.59fe61ac.chunk.js.map",
     "index.html": "/Reward-Adz-Redesign/index.html",
-    "static/css/main.5130ded6.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.5130ded6.chunk.css.map",
-    "static/js/2.1e1112fa.chunk.js.LICENSE.txt": "/Reward-Adz-Redesign/static/js/2.1e1112fa.chunk.js.LICENSE.txt",
+    "static/css/main.2a0c6211.chunk.css.map": "/Reward-Adz-Redesign/static/css/main.2a0c6211.chunk.css.map",
+    "static/js/2.59fe61ac.chunk.js.LICENSE.txt": "/Reward-Adz-Redesign/static/js/2.59fe61ac.chunk.js.LICENSE.txt",
     "static/media/David Rewardadz Promo-1.14c56d6f.m4v": "/Reward-Adz-Redesign/static/media/David Rewardadz Promo-1.14c56d6f.m4v",
     "static/media/Edited_20210608_221705.c73cb703.mp4": "/Reward-Adz-Redesign/static/media/Edited_20210608_221705.c73cb703.mp4",
     "static/media/Group 3.c49cbae8.svg": "/Reward-Adz-Redesign/static/media/Group 3.c49cbae8.svg",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cb06663c.js",
-    "static/js/2.1e1112fa.chunk.js",
-    "static/css/main.5130ded6.chunk.css",
-    "static/js/main.bf66b7bf.chunk.js"
+    "static/js/2.59fe61ac.chunk.js",
+    "static/css/main.2a0c6211.chunk.css",
+    "static/js/main.e61b1338.chunk.js"
   ]
 }
